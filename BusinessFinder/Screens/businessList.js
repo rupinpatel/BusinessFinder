@@ -42,7 +42,9 @@ export default function BusinessList({navigation}) {
             <Text style={styles.title}>{responseData.total} results found!</Text> 
             </View>
 
-            <Animatable.View animation="fadeInUpBig" style = {styles.list_area}>
+            <Animatable.View 
+            animation="fadeInUpBig" 
+            style = {styles.list_area}>
             <View> 
                 <FlatList data={responseData.businesses} renderItem={({ item }) => (
                     <TouchableOpacity onPress={() => {navigation.push('BusinessDetails', {businessId: item.id})}}>
@@ -61,11 +63,9 @@ export default function BusinessList({navigation}) {
 
 const {height} = Dimensions.get("screen");
 const image_height = height * 0.28;
+const height_logo = height * 0.28;
 
 const styles = StyleSheet.create({
-    container: {
-        padding: 25,
-    },
     title_area: {
         flex: 1,
         justifyContent: 'center',
@@ -95,4 +95,9 @@ const styles = StyleSheet.create({
         width: '100%',
         height: image_height
     },
+    container: {
+        flex: 1, 
+        backgroundColor: '#fff',
+    },
+      
 });
