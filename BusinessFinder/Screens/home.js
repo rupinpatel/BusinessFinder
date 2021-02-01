@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     },
     search_area: {
         flex: 1,
-        backgroundColor: '#A9CBE8',
+        backgroundColor: '#18B5A0',
         borderTopLeftRadius: 15,
         borderTopRightRadius: 15,
         paddingVertical: 50,
